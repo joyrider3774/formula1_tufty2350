@@ -12,8 +12,8 @@
 // pico_cmake_set PICO_PLATFORM=rp2350
 // pico_cmake_set PICO_CYW43_SUPPORTED = 1
 
-#ifndef _BOARDS_PICO2_W_H
-#define _BOARDS_PICO2_W_H
+#ifndef _BOARDS_PICO2_W_TUFTY2350_H
+#define _BOARDS_PICO2_W_TUFTY2350_H
 
 
 #define PICO_PANIC_FUNCTION mp_pico_panic
