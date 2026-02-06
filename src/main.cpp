@@ -1,3 +1,4 @@
+#include "powman.h"
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include <cstring>
@@ -5,7 +6,6 @@
 #include "common/pimoroni_bus.hpp"
 #include "drivers/st7789/st7789.hpp"
 #include "libraries/pico_graphics/pico_graphics.hpp"
-#include "powman.h"
 #include "commonvars.h"
 #include "intro.h"
 #include "sound.h"
@@ -69,10 +69,6 @@ void printDebugCpuRamLoad()
 
 int main() {
     stdio_init_all();
-    gpio_init(BW_SW_POWER_EN);
-    gpio_set_dir(BW_SW_POWER_EN, GPIO_OUT);
-    gpio_put(BW_SW_POWER_EN, 1);
-
     st7789 = new ST7789(DISPLAY_WIDTH, DISPLAY_HEIGHT, ROTATE_180, parallel_bus);
     graphics = new PicoGraphics_PenRGB565(st7789->width, st7789->height, nullptr);
     graphics->color = 0x0000;
