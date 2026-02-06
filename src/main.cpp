@@ -33,18 +33,8 @@ ParallelPins parallel_bus = {
     .bl = 26
 };
 
-ST7789 st7789(
-    DISPLAY_WIDTH,
-    DISPLAY_HEIGHT,
-    ROTATE_180,
-    parallel_bus
-);
-
-PicoGraphics_PenRGB565 graphics(
-    st7789.width,
-    st7789.height,
-    nullptr
-);
+ST7789 *st7789;
+PicoGraphics_PenRGB565 *graphics;
 
 uint8_t readButtons()
 {
@@ -65,9 +55,6 @@ uint8_t readButtons()
 
 void printDebugCpuRamLoad()
 {
-
-
-    
     if(debugMode)
     {
         int currentFPS = (int)frameRate;
@@ -85,13 +72,19 @@ int main() {
     gpio_init(BW_SW_POWER_EN);
     gpio_set_dir(BW_SW_POWER_EN, GPIO_OUT);
     gpio_put(BW_SW_POWER_EN, 1);
-    st7789.set_backlight(200);
+
+    st7789 = new ST7789(DISPLAY_WIDTH, DISPLAY_HEIGHT, ROTATE_180, parallel_bus);
+    graphics = new PicoGraphics_PenRGB565(st7789->width, st7789->height, nullptr);
+    graphics->color = 0x0000;
+    graphics->clear();
+    st7789->update(graphics);
+    st7789->set_backlight(200);
     
     fb.bgr = false;
     fb.littleEndian = false;
     fb.height = 240;
     fb.width = 320;
-    fb.buffer = (uint16_t*)graphics.frame_buffer;
+    fb.buffer = (uint16_t*)graphics->frame_buffer;
     initSound();
     gameState = gsInitIntro;
     currentTime = time_us_32();
@@ -131,7 +124,7 @@ int main() {
                 break;
         }
         printDebugCpuRamLoad();
-        st7789.update(&graphics);
+        st7789->update(graphics);
         endFrame = true;
     }
     return 0;
