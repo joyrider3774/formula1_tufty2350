@@ -16,7 +16,7 @@
 #define _BOARDS_PICO2_W_TUFTY2350_H
 
 
-#define PICO_PANIC_FUNCTION mp_pico_panic
+//#define PICO_PANIC_FUNCTION mp_pico_panic
 
 // Board config
 // RTC = PCF85063e
