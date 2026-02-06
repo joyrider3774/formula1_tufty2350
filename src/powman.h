@@ -1,8 +1,5 @@
 
 
-// For machine_pin_find
-#include "pimoroni_tufty2350.h"
-
 #include <stdio.h>
 #include <inttypes.h>
 #include <math.h>
@@ -22,7 +19,6 @@
 #include "hardware/i2c.h"
 #include "hardware/resets.h"
 #include "hardware/pwm.h"
-
 
 
 // For Blinky teardown

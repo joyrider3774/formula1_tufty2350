@@ -1,4 +1,3 @@
-#include "pimoroni_tufty2350.h"
 #include "pico/stdlib.h"
 #include "pico/time.h"
 #include <cstring>
