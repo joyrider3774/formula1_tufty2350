@@ -7,6 +7,10 @@ Formula 1 Game & Watch is a small, fictive formula 1 game & watch style lcd game
 The aim of the game, is to avoid hitting other traffic coming down the screen, you do this by moving your car on the bottom left or right. 
 
 ## Controls tufty2350
-A: Move Player left
-C: Move Player right
-A or C: Start a new game at the boot or gameover screen
+- A: Move Player left
+- C: Move Player right
+- A or C: Start a new game at the boot or gameover screen
+
+## notes 
+this repo uses a fork of pimoroni-pico where a change has been mode to not build the examples but also a change to the old st7789 driver to make it work with the overlocking done on tufty .
+rp2350. You could still use the original repo if you disable / comment the overclocking in pimoroni_tufty2350.h in the boards directory
