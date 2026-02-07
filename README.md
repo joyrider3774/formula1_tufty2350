@@ -13,4 +13,5 @@ The aim of the game, is to avoid hitting other traffic coming down the screen, y
 
 ## notes 
 this repo uses a fork of pimoroni-pico where a change has been mode to not build the examples but also a change to the old st7789 driver to make it work with the overlocking done on tufty .
-rp2350. You could still use the original repo if you disable / comment the overclocking in pimoroni_tufty2350.h in the boards directory
+rp2350. You could still use the original repo if you disable / comment the overclocking in pimoroni_tufty2350.h in the boards directory. The micropython firmware also runs at 200mhz and the 
+pimoroni_tufty2350.h header comes from there hence why it applies the same overlock
