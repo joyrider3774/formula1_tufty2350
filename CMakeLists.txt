@@ -54,12 +54,12 @@ pico_set_program_version(formula1 "1.0")
 pico_enable_stdio_uart(formula1 0)
 pico_enable_stdio_usb(formula1 1)
 
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/libs/pimoroni-pico)
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/pimoroni-pico)
 
 target_link_directories(
     formula1
     PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/libs/pimoroni-pico
+    ${CMAKE_CURRENT_LIST_DIR}/pimoroni-pico
 )
 
 # Add the standard library to the build
@@ -77,7 +77,7 @@ target_link_libraries(
 target_include_directories(
     formula1
     PRIVATE
-    ${CMAKE_CURRENT_LIST_DIR}/libs/pimoroni-pico
+    ${CMAKE_CURRENT_LIST_DIR}/pimoroni-pico
 )
 
 # Add the standard include files to the build
