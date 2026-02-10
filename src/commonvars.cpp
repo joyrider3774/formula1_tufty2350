@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "commonvars.h"
-#include "Framebuffer.h"
+#include "framebuffer.h"
 
 uint8_t gameState, debugMode;
 char* verifyCode = NULL;

@@ -8,7 +8,7 @@
 #include "images/player_RGB565_BE.h"
 #include "images/background_RGB565_BE.h"
 #include "images/LcdFont_RGB565_BE.h"
-#include "Framebuffer.h"
+#include "framebuffer.h"
 
 void DrawGame(void)
 {

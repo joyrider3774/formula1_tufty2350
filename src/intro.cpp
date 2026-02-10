@@ -3,7 +3,7 @@
 #include "printfuncs.h"
 #include "intro.h"
 #include "images/bigfont_RGB565_BE.h"
-#include "Framebuffer.h"
+#include "framebuffer.h"
 
 #define FRAMEDELAY 60
 

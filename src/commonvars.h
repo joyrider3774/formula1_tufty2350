@@ -2,7 +2,7 @@
 #define commonvars_h
 
 #include <cstdint>
-#include "Framebuffer.h"
+#include "framebuffer.h"
 
 #define gsGame 0
 #define gsIntro 1

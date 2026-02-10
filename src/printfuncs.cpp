@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include "commonvars.h"
 #include "printfuncs.h"
-#include "Framebuffer.h"
+#include "framebuffer.h"
 
 // function provided by @Pharap
 // If the array is not big enough,
