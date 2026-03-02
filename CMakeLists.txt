@@ -48,7 +48,7 @@ file(GLOB HEADERS
 add_executable(formula1 ${SOURCES} ${HEADERS})
 
 pico_set_program_name(formula1 "formula1")
-pico_set_program_version(formula1 "1.3")
+pico_set_program_version(formula1 "1.4")
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(formula1 0)
