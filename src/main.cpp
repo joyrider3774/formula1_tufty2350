@@ -92,6 +92,7 @@ int main() {
     fb.width = 320;
     fb.buffer = (uint16_t*)graphics->frame_buffer;
     initSound();
+	loadSaveState();
     gameState = gsInitIntro;
     currentTime = time_us_32();
     lastTime = 0;
